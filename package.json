@@ -1,0 +1,22 @@
+{
+  "name": "block37_backend_application",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "db:schema": "psql -d art_gallery_inventory -f db/schema.sql",
+    "db:seed": "psql -d art_gallery_inventory -f db/seed.sql",
+    "db:reset": "npm run db:schema && npm run db:seed",
+    "dev": "node --watch --env-file=.env server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "morgan": "^1.10.0",
+    "pg": "^8.16.0"
+  }
+}
