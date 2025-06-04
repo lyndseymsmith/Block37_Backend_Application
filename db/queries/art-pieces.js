@@ -56,3 +56,11 @@ export async function deleteArtPiece(id) {
   );
   return rows[0];
 }
+
+// export async function getArtPiecesByExhibitionId(exhibitionId) {
+//   const { rows } = await client.query(
+//     `SELECT * FROM pieces WHERE exhibition_id = $1;`,
+//     [exhibitionId]
+//   );
+//   return rows;
+// }
